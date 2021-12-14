@@ -1,0 +1,54 @@
+<div style="position: relative;" class="container table-responsive py-1">
+
+
+
+    <div class="instep d-flex justify-content-center flex-column text-center pt-4">
+        <div class="card">
+            <h1 class="text-center railway">TRIP ADVISOR DATASET</h1>
+
+            <p class="text-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+            </p>
+
+            <span class="btns">
+                <button mat-flat-button class="stepbtn" (click)="toggle()">View Dataset</button>
+                <span class="pl-2"></span>
+                <button mat-flat-button class="skipbtn" matStepperNext>Proceed with dataset</button>
+            </span>
+
+            <p class="pt-2 ah">
+                There are total 58162 instances in dataset
+            </p>
+        </div>
+    </div>
+
+
+    <table *ngIf="view" class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">ReviewID</th>
+                <th scope="col">Reviews</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of data let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.reviewID}}</td>
+                <td>{{item.review}}</td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+
+</div>
+
+<div style="position: fixed;bottom: 9em;height: 4em;width: 3em;">
+    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+        <mat-icon>file_download</mat-icon>
+    </button>
+</div>

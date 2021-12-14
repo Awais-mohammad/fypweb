@@ -1,0 +1,59 @@
+<div class="icon">
+    <i (click)="close()" class="fas fa-times-circle"></i>
+</div>
+
+<div class="iconright">
+    <i class="fas fa-shopping-bag"></i>
+    <p>| Working Environment</p>
+</div>
+
+
+<mat-horizontal-stepper #stepper>
+    <mat-step label="DataSet" [stepControl]="firstFormGroup">
+
+        <app-dataset></app-dataset>
+
+
+    </mat-step>
+
+    <mat-step label="Data Preprocessing" [stepControl]="firstFormGroup">
+
+        <app-preprocess></app-preprocess>
+
+
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="Features Extraction">
+
+        <app-features></app-features>
+    </mat-step>
+
+    <mat-step label="Train Model">
+        <app-ml></app-ml>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="View Results">
+
+        <app-results></app-results>
+    </mat-step>
+
+
+</mat-horizontal-stepper>
+<!-- 
+<button mat-button matStepperPrevious>Back</button>
+<button mat-button matStepperNext>Next</button> -->
+<div class="d-flex text-center justify-content-center">
+
+    <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+        <mat-icon>
+            arrow_back
+        </mat-icon>
+    </button>
+
+    <span class="pr-3"></span>
+
+    <button (click)="goForward(stepper)" mat-fab color="primary" aria-label="Example icon button with a home icon">
+        <mat-icon>navigate_next</mat-icon>
+    </button>
+
+</div>

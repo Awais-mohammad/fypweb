@@ -1,0 +1,48 @@
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12em;
+
+    ul {
+        list-style: none;
+        position: relative;
+        display: flex;
+        top: 18px;
+        li {
+            a {
+                color: white;
+                font-size: 18px;
+                padding: 0 15px;
+                font-family: "Roboto", sans-serif;
+            }
+        }
+    }
+}
+
+.navbar-inverse {
+    background-color: #2f4256;
+    transition: 0.2s;
+    height: 7em;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+ul li a:hover{
+    color: rgba(92, 7, 21, 0.884);
+    cursor: pointer;
+}
+.logo {
+    position: relative;
+    top: -1em;
+    img {
+        height: 10em;
+        object-fit: contain;
+        position: relative;
+    }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");

@@ -1,0 +1,112 @@
+<mat-vertical-stepper #stepper>
+    <mat-step label="ML MODEL 1" [stepControl]="firstFormGroup">
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">SUpport Vector Machines</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Choose Evaluation metrics and cv
+                    </p>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Evaluation Metrics</mat-label>
+                        <select matNativeControl required>
+                            <option value="volvo">Confusion Matrix</option>
+                            <option value="saab">Accuracy</option>
+                            <option value="mercedes">Precision</option>
+                            <option value="audi">Recall</option>
+                            <option value="audi">F1-measure</option>
+                        </select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Validation Technique</mat-label>
+                        <select matNativeControl required>
+                            <option value="volvo">Cross 10 Fold</option>
+                            <option value="saab">Default</option>
+
+                        </select>
+                    </mat-form-field>
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="ML MODEL 2">
+
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Random Forest Classifier</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Choose Evaluation metrics and cv
+                    </p>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Evaluation Metrics</mat-label>
+                        <select matNativeControl required>
+                            <option value="volvo">Confusion Matrix</option>
+                            <option value="saab">Accuracy</option>
+                            <option value="mercedes">Precision</option>
+                            <option value="audi">Recall</option>
+                            <option value="audi">F1-measure</option>
+                        </select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Validation Technique</mat-label>
+                        <select matNativeControl required>
+                            <option value="volvo">Cross 10 Fold</option>
+                            <option value="saab">Default</option>
+
+                        </select>
+                    </mat-form-field>
+
+                </div>
+            </div>
+
+        </div>
+
+    </mat-step>
+
+
+
+
+
+
+
+</mat-vertical-stepper>
+<!-- 
+<button mat-button matStepperPrevious>Back</button>
+<button mat-button matStepperNext>Next</button> -->

@@ -1,0 +1,202 @@
+<mat-vertical-stepper #stepper>
+    <mat-step label="Feature 1" [stepControl]="firstFormGroup">
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">TF-IDF Vectorizer</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup" label="Feature 2">
+
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Word2Vec Feature Model</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </mat-step>
+
+    <mat-step label="Feature 3">
+
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Bert Feature Model</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </mat-step>
+
+    <mat-step label="Feature 4">
+
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Punctuation Features</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </mat-step>
+
+    <mat-step label="Feature 5">
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Subjectivity Score</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Skip</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </mat-step>
+
+    <mat-step label="Apply All Features">
+
+
+        <div class="d-flex justify-content-center flex-column">
+            <div class="instep d-flex justify-content-center flex-column text-center">
+                <div class="card">
+                    <h1 class="text-center railway">Extract all features</h1>
+
+                    <p class="text-left">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, libero.
+                    </p>
+
+                    <section class="align-left">
+                        <mat-checkbox [checked]="allComplete" [color]="task.color" [indeterminate]="someComplete()"
+                            (change)="setAll($event.checked)">
+                            {{task.name}}
+                        </mat-checkbox>
+                    </section>
+
+                    <span class="pt-1 align-left">
+                        <ul style="left: 1px;position: relative;">
+                            <li *ngFor="let subtask of task.subtasks">
+                                <mat-checkbox [(ngModel)]="subtask.completed" [color]="subtask.color"
+                                    (ngModelChange)="updateAllComplete()">
+                                    {{subtask.name}}
+                                </mat-checkbox>
+                            </li>
+                        </ul>
+                    </span>
+
+
+                    <span class="btns">
+                        <button mat-flat-button class="stepbtn" matStepperNext>Apply</button>
+                        <span class="pt-2"></span>
+                        <button mat-flat-button class="skipbtn" matStepperNext>Terminate</button>
+                    </span>
+
+                    <p class="pt-2">
+                        Skipping the step will effect accuracy of the model
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+    </mat-step>
+
+
+
+</mat-vertical-stepper>
+<!-- 
+<button mat-button matStepperPrevious>Back</button>
+<button mat-button matStepperNext>Next</button> -->

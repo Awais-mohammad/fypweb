@@ -1,0 +1,42 @@
+th {
+    font-family: "Raleway", sans-serif;
+}
+
+.card {
+    width: 70%;
+    padding: 5px;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.151);
+    border: none;
+    background-color: rgba(255, 255, 255, 0.664);
+    border-left: 5px solid #272d3a;
+}
+.stepbtn {
+    background: #1f2430ea;
+    color: white;
+    width: 48%;
+    text-transform: uppercase;
+
+    font-family: "Roboto", sans-serif;
+}
+.instep {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skipbtn {
+    color: rgba(224, 16, 68, 0.897);
+
+    border: 1px solid rgba(224, 16, 68, 0.897);
+    width: 48%;
+
+    font-family: "Roboto", sans-serif;
+}
+.ah{
+    color: rgba(233, 46, 13, 0.822)
+}
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&family=Roboto:wght@100&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto:wght@100&display=swap");

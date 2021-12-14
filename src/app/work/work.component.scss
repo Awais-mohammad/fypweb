@@ -1,0 +1,27 @@
+.icon {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+
+    i {
+        color: red;
+        font-size: 28px;
+    }
+}
+
+.iconright {
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    p {
+        font-size: 20px;
+        padding-top: 5px;
+        padding-left: 2px;
+        font-family: "Be Vietnam Pro", sans-serif;
+    }
+
+    i {
+        color: rgb(223, 12, 58);
+        font-size: 28px;
+    }
+}
